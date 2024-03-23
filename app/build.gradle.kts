@@ -53,9 +53,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation(("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2"))
 
-    // RxJava2
-    implementation("io.reactivex.rxjava2:rxjava:2.2.21")
-    implementation("io.reactivex:rxandroid:1.2.1")
+    implementation ("androidx.activity:activity-ktx:1.8.2")
+    implementation ("androidx.fragment:fragment-ktx:1.6.2")
 
     val room_version = "2.6.0"
     implementation("androidx.room:room-runtime:$room_version")
