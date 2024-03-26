@@ -2,12 +2,12 @@ package com.sangik.mvvmstudy.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.sangik.mvvmstudy.R
 import com.sangik.mvvmstudy.ViewInterface
 import com.sangik.mvvmstudy.databinding.ActivityMainBinding
+import com.sangik.mvvmstudy.util.ActivityUtil
 
 class MainActivity : AppCompatActivity(), ViewInterface {
     // Main : Binding 연결과 ViewModel 선언
@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity(), ViewInterface {
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-
         init(savedInstanceState)
     }
 
@@ -36,8 +35,10 @@ class MainActivity : AppCompatActivity(), ViewInterface {
         binding.vmMain = model
     }
 
-    override fun initListener()
-    {
-        Toast.makeText(this@MainActivity, "initListener!", Toast.LENGTH_SHORT).show()
+    override fun initListener() {
+        binding.btnMove.setOnClickListener {
+            val activityUtil = ActivityUtil()
+            activityUtil.startNaverActivity(this)
+        }
     }
 }
