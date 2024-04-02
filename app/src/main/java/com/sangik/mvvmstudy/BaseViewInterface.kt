@@ -2,7 +2,7 @@ package com.sangik.mvvmstudy
 
 import android.os.Bundle
 
-interface ViewInterface {
+interface BaseViewInterface {
     fun initDataBinding()
     fun init(savedInstanceState: Bundle?)
     fun initListener()

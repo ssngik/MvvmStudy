@@ -3,10 +3,11 @@ package com.sangik.mvvmstudy.view.main
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.sangik.mvvmstudy.base.BaseViewModel
 
-class MainViewModel : ViewModel(){
+class MainViewModel : BaseViewModel(){
     // 현재 카운트 관리 LiveData
-    var countResult = MutableLiveData<Int>()
+    val countResult = MutableLiveData<Int>()
 
     init {
         countResult.value = 0

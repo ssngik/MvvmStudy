@@ -41,6 +41,10 @@ android {
 
 dependencies {
 
+    val rxJavaVersion = "2.2.21"
+    val rxAndroidVersion = "2.1.1"
+    val room_version = "2.6.0"
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -56,7 +60,9 @@ dependencies {
     implementation ("androidx.activity:activity-ktx:1.8.2")
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
 
-    val room_version = "2.6.0"
+    implementation ("io.reactivex.rxjava2:rxjava:$rxJavaVersion")
+    implementation ("io.reactivex.rxjava2:rxandroid:$rxAndroidVersion")
+
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
 }

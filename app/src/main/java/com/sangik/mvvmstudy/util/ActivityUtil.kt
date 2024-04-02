@@ -5,7 +5,7 @@ import com.sangik.mvvmstudy.view.naver.NaverApiActivity
 import android.content.Intent
 
 class ActivityUtil {
-    fun startNaverActivity(activity: Activity){
+    fun startNaverApiActivity(activity: Activity){
         val intent = Intent(activity, NaverApiActivity::class.java)
         activity.startActivity(intent)
     }
