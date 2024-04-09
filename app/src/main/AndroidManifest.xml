@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.naver.NaverApiActivity"/>
+        <activity android:name=".view.mocky.MockyActivity"/>
     </application>
 
 </manifest>

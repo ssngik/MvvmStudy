@@ -18,7 +18,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     override fun initListener() {
         viewDataBinding.btnMove.setOnClickListener {
             val activityUtil = ActivityUtil()
-            activityUtil.startNaverApiActivity(this)
+            activityUtil.startMockyActivity(this)
         }
     }
 }

@@ -9,19 +9,9 @@ class MainViewModel : BaseViewModel(){
     // 현재 카운트 관리 LiveData
     val countResult = MutableLiveData<Int>()
 
-    init {
-        countResult.value = 0
-    }
+    init { countResult.value = 0 }
 
-    fun increase()
-    {
-        countResult.value = countResult.value?.plus(1)
-    }
+    fun increase() { countResult.value = countResult.value?.plus(2) }
 
-    fun decrease()
-    {
-        countResult.value = countResult.value?.minus(1)
-    }
-
-
+    fun decrease() { countResult.value = countResult.value?.minus(2) }
 }

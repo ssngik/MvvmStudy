@@ -10,4 +10,8 @@ object RetrofitService {
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+
+    fun getInstance(): Retrofit{
+        return retrofit
+    }
 }

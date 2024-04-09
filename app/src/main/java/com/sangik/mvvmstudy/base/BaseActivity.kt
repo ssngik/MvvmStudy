@@ -11,7 +11,7 @@ import kotlin.reflect.KClass
 
 abstract class BaseActivity <T: ViewDataBinding, VM : BaseViewModel>(
     @LayoutRes private val resourceId : Int,
-    clazz: KClass<VM>,
+    clazz: KClass<VM>, // viewModel 클래스의 Kotlin 클래스 타입을 매개변수로 받는다.
     private val viewModelId : Int
 ):AppCompatActivity() , BaseViewInterface{
 
@@ -19,7 +19,7 @@ abstract class BaseActivity <T: ViewDataBinding, VM : BaseViewModel>(
         DataBindingUtil.setContentView(this, resourceId)
     }
 
-    private val viewModel : VM by lazy{
+    val viewModel : VM by lazy{
         ViewModelProvider(this)[clazz.java]
     }
 
